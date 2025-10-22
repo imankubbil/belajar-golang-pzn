@@ -2,6 +2,7 @@ package golangweb
 
 import (
 	"embed"
+	"io/fs"
 	"net/http"
 	"testing"
 )
@@ -24,7 +25,6 @@ func TestFileServer(t *testing.T) {
 	}
 }
 
-//go:embed resources
 var resources embed.FS
 
 func TestFileServerGolangEmbed(t *testing.T) {
